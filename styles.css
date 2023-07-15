@@ -7,9 +7,9 @@ padding: 0;
 /* background-color: #000; */
 background-image: url("image4.jpg");
 background-size: cover;
-overflow: 0;
+/* overflow: 0;
 overflow-x: hidden;
-overflow-y: hidden;
+overflow-y: hidden; */
 }
 .milky-way
 {
