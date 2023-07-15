@@ -1,76 +1,40 @@
-body {
-    background: radial-gradient(circle at bottom, navy 5%, black 100%);
-    height: 100vh;
-    overflow: hidden;
-    }
-
-    h1 {
-    font-family: 'Comfortaa', cursive;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-    }
-
-    .mask-galaxy {
-    background: url(http://i.dailymail.co.uk/i/pix/2016/04/15/13/2591F30000000578-3541631-image-a-4_1460721669000.jpg) center center;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-animation: travelGalaxy 10s linear infinite;
-    -moz-animation: travelGalaxy 10s linear infinite;
-    -moz-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-animation: travelGalaxy 10s linear infinite;
-    -o-text-fill-color: transparent;
-    -o-background-clip: text;
-    -o-animation: travelGalaxy 10s linear infinite;
-    }
-
-    @-webkit-keyframes travelGalaxy {
-        0% {background-position: right bottom;}
-        100% {background-position: left top;}
-    }
-    @-moz-keyframes travelGalaxy {
-    0% {background-position: right bottom;}
-    00% {background-position: left top;}
-    }
-
-    * {
+*{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+body{
+margin: 0;
+padding: 0;
+/* background-color: #000; */
+background-image: url("image4.jpg");
+background-size: cover;
+/* overflow: 0; */
+}
+.milky-way
+{
+    background: #000 url(https://cdn.spacetelescope.org/archives/images/screen/heic0602a.jpg) no-repeat center center /cover;
+    width: 700px;
+    height: 700px;
+    margin: 100px auto auto;
+    border-radius: 50%;
+    box-shadow: inset 0 0 40px #000, inset 0 0 40px #000;
+    transform: rotateX(-50deg);
+    animation: animate 60s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotateX(40deg) rotate(0deg);
     }
-
-    .galaxy-wrapper {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    100%{
+        transform: rotateX(40deg) rotate(360deg);
     }
+}
 
-    .galaxy-gradient {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: radial-gradient(circle at 50%, transparent 1%, black 50%);
-    }
-
-    .galaxy-image {
-    width: 100%;
-    height: 100%;
-    background:  url(http://cdn.spacetelescope.org/archives/images/screen/heic0602a.jpg) center no-repeat, transparent;
-    background-size: contain;
-    color: white;
-    animation: rotateGalaxy 240s linear infinite;
-    }
-
-
-    @keyframes rotateGalaxy {
+/* @keyframes animate {
     from {
-        transform: rotate(0);
+      transform: rotate(0);
     }
     to {
-        transform: rotate(-360deg);
+      transform: rotate(-360deg);
     }
-    }
+  } */
